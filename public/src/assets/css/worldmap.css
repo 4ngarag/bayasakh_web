@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+.world-map {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1em;
+  position: relative;
+}
+.world-map img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.pin-wearehere {
+  background: #cb0f0f;
+  position: absolute;
+  width: 0.7em;
+  height: 0.7em;
+  border-radius: 50%;
+}
+.pin-right {
+  background: #4362f8;
+  position: absolute;
+  width: 0.7em;
+  height: 0.7em;
+  border-radius: 50%;
+}
+.pin {
+  background: #4362f8;
+  position: absolute;
+  width: 0.7em;
+  height: 0.7em;
+  border-radius: 50%;
+}
+.pin::before {
+  content: '';
+  background: #4362f8;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: pulse 1.3s ease-in-out infinite;
+}
+.pin-right::before {
+  content: '';
+  background: #4362f8;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: pulse 1.3s ease-in-out infinite;
+}
+.pin span {
+  display: inline-block;
+  white-space: nowrap;
+  position: absolute;
+  left: 1.5em;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border-radius: 3em;
+  padding: 0.3em 0.6em;
+  font-size: 0.9em;
+}
+.pin-right span {
+  display: inline-block;
+  white-space: nowrap;
+  position: absolute;
+  right: 1.5em;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border-radius: 3em;
+  padding: 0.3em 0.6em;
+  font-size: 0.9em;
+}
+.pin-wearehere span {
+  display: inline-block;
+  white-space: nowrap;
+  position: absolute;
+  left: 1.5em;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border-radius: 3em;
+  padding: 0.3em 0.6em;
+  font-size: 0.9em;
+}
+.mongolia {
+  top: 30%;
+  left: 76%;
+}
+.russia {
+  top: 24%;
+  left: 74%;
+}
+.korea {
+  top: 43%;
+  left: 80.5%;
+}
+.denmark {
+  top: 30%;
+  left: 47%;
+}
+.france {
+  top: 31%;
+  left: 45%;
+}
+.poland {
+  top: 31%;
+  left: 54%;
+}
+.ukraine {
+  top: 35%;
+  left: 54%;
+}
+.moldova {
+  top: 37%;
+  left: 53%;
+}
+.singapore {
+  top: 64%;
+  left: 78%;
+}
+.vietnam {
+  top: 58%;
+  left: 75%;
+}
+.indonesia {
+  top: 65%;
+  left: 74%;
+}
+@keyframes pulse {
+  100% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(2.5);
+  }
+}
+@media screen and (max-width: 600px) {
+  .world-map {
+      font-size: 13px;
+  }
+}
